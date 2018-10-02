@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.eclipsesource.cordova.plugin.firebase.crashlytics.example" version="0.1.0">
+  <name>Crashlytics Example</name>
+  <author email="tabrisjs@eclipsesource.com">
+    Tabris.js Team
+  </author>
+  <preference name="EnableDeveloperConsole" value="$IS_DEBUG" />
+  <platform name="ios">
+    <resource-file src="GoogleService-Info.plist" />
+  </platform>
+  <plugin name="tabris-plugin-firebase" spec="https://github.com/eclipsesource/tabris-plugin-firebase.git#badadd39b83e0bcf88f3aa6ac6cdeaa848d06840" />
+  <plugin name="cordova-plugin-firebase-crashlytics" spec="../" />
+</widget>

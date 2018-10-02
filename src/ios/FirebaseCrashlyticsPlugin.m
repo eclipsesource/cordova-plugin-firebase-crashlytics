@@ -24,7 +24,7 @@
                                NSLocalizedFailureReasonErrorKey: NSLocalizedString(message, nil),
                                NSLocalizedRecoverySuggestionErrorKey: NSLocalizedString(@"", nil)};
 
-    NSError *error = [NSError errorWithDomain:@"uk.co.trssc" code:-1 userInfo:userInfo];
+    NSError *error = [NSError errorWithDomain:@"com.eclipsesource.cordova.plugin.firebase.crashlytics" code:-1 userInfo:userInfo];
     [CrashlyticsKit recordError:error];
     [[Crashlytics sharedInstance] recordCustomExceptionName:@"HandledException" reason:message frameArray:@[]];
 }
@@ -71,7 +71,7 @@
 
 - (void)setUserIdentifier:(CDVInvokedUrlCommand *)command {
     NSString *identifier = [command argumentAtIndex:0];
-    
+
     [CrashlyticsKit setUserIdentifier:identifier];
 }
 

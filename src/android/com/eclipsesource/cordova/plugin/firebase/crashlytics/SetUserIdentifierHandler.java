@@ -1,4 +1,4 @@
-package uk.co.reallysmall.cordova.plugin.firebase.crashlytics;
+package com.eclipsesource.cordova.plugin.firebase.crashlytics;
 
 import android.util.Log;
 
@@ -8,16 +8,15 @@ import org.apache.cordova.CordovaInterface;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-public class SetBoolHandler implements ActionHandler {
+public class SetUserIdentifierHandler implements ActionHandler {
     @Override
     public boolean handle(JSONArray args, CordovaInterface cordova) {
         try {
-            final String key = args.getString(0);
-            final Boolean value = args.getBoolean(1);
+            final String identifier = args.getString(0);
 
-            Crashlytics.setBool(key, value);
+            Crashlytics.setUserIdentifier(identifier);
         } catch (JSONException e) {
-            Log.e(FirebaseCrashlyticsPlugin.TAG, "Error setting bool", e);
+            Log.e(FirebaseCrashlyticsPlugin.TAG, "Error setting user identifier", e);
         }
         return true;
     }

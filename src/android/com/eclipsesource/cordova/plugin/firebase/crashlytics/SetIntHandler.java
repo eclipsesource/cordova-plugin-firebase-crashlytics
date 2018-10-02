@@ -1,4 +1,4 @@
-package uk.co.reallysmall.cordova.plugin.firebase.crashlytics;
+package com.eclipsesource.cordova.plugin.firebase.crashlytics;
 
 import android.util.Log;
 
